@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "get-papers"
+version = "0.1.0"
+description = "CLI tool to fetch PubMed papers with pharma/biotech authors"
+authors = ["Tharun Mettala <your.email@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "get_papers", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+biopython = "^1.83"
+pandas = "^2.2"
+rich = "^13.7"
+
+[tool.poetry.scripts]
+get-papers-list = "get_papers.cli:main"
